@@ -1,0 +1,69 @@
+1.@Component로 컴포넌트 만들기 
+-----------------------
+@Decorator 
+	어노테이션 X
+	함수 O 
+	
+실습
+	tslint.json
+	message.vue
+	Home.vue
+	
+	
+
+2.@Prop으로 데이터 전달하기 
+-----------------------
+https://kr.vuejs.org/v2/guide/components.html#%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%EC%9E%91%EC%84%B1
+
+Prop : 부모에서 자식으로 communication하는 데코레이터 
+Prop = Property 
+cf)프로퍼티 : 변수 
+
+실습 : Home 컴포넌트(부모)에 자식컴포넌트를 만들어서 그 안에서 메시지를 표시해주기 
+	children.vue 
+	Home.vue 
+
+
+
+3.@Watch로 데이터 변화 감지하기 
+-----------------------
+Object.defineProperty(obj, prop, descriptor)
+
+실습 : 메시지 변화를 감지해서 알람 메시지도 변화해주기 
+	Home.vue
+	children.vue 
+	
+	
+
+4.@Emit 으로 이벤트 전달하기 
+-----------------------
+https://kr.vuejs.org/v2/guide/components.html#%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%EC%9E%91%EC%84%B1
+
+Emit : 자식에서 부모로 communication하는 데코레이터  
+	
+실습 : 숫자증가 
+	Home2.vue : 실행 URL -> http://localhost:8080/home2
+	children2.vue 
+	
+	
+
+5.@Provide / @inject로 데이터 전달하기 
+-----------------------
+@Provide 와 @inject는 Property Decorator 이다. 
+
+실습 
+	Home3.vue : 실행 URL -> http://localhost:8080/home3
+	children3.vue 
+
+@Prop와의 차이?
+	@Prop : 직계 부모/자식 관계에서만 사용가능 
+		  : <children :property="value"></children> <== 이렇게 데이터를 직접 넣어줌 
+	
+	@Provide / @inject : 부모의 부모의 부모.. 까지도 데이터의 주입이 가능
+	                   : <children></children> <== 어떤 값을 가져오는지 명시적으로 알 수 없어서, 코드의 가독성이 떨어짐
+					                           <== 공식문서에서도 비추천 : https://kr.vuejs.org/v2/api/index.html#provide-inject
+											   
+											   
+	
+
+		
