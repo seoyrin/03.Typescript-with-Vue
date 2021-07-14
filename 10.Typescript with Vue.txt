@@ -65,5 +65,29 @@ Emit : 자식에서 부모로 communication하는 데코레이터
 											   
 											   
 	
+6.@Model 사용하기 
+-----------------------
+실습
+	Home4.vue
+	my-checkbox.vue
 
-		
+
+
+7.Mixins 활용 방법	
+-----------------------
+믹스인 : 다중상속 구현 가능
+https://v3.ko.vuejs.org/guide/mixins.html
+
+실습
+	Home5.vue : 실행 URL -> http://localhost:8080/home5
+	accordion.vue
+	dropdown.vue
+	toggle.vue
+	
+	
+	
+8.Vuex의 데이터흐름과 Vuex 
+-----------------------	
+https://kr.vuejs.org/v2/guide/components.html
+보다 복잡한 경우에는 전용 상태 관리 패턴을 고려해야 한다. 
+
